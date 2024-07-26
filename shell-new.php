@@ -168,7 +168,7 @@ if (empty($disfunc)) {
 }
 
 function author() {
-	echo "<center><br>An"."on"."7 - 2"."02"."2<br><a href='https://sh"."el"."l.an"."ons"."ec-te"."am.org/' target='_blank'>An"."on"."Se"."c Te"."am</a></center>";
+	echo "<center><br>An"."on"."7 - 2"."02"."2<br>Re"."co"."de"."by :"."XzJerry</center>";
 	exit();
 }
 
